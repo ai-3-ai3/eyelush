@@ -115,6 +115,13 @@ a { text-decoration: none; color: inherit; }
   object-fit: contain;  /* ← 画像を切らずに全体を表示 */
   display: block;
 }
+/* Before/Afterだけ「引き＋右寄せ」にする */
+.ba__box .ph img{
+  object-position: right center; /* 右を基準に見せる */
+  transform: scale(0.9);         /* 0.9 → 引き画像（小さく見せる） */
+  transform-origin: right center;/* 右基準で縮める */
+}
+
 
 
 .ph--small { height: 200px; }
