@@ -61,7 +61,7 @@ a { text-decoration: none; color: inherit; }
 }
 .fv_image img {
   width: 100%;
-  max-width: 260px; /* ← 好きなサイズに変更OK！ */
+  max-width: 260px;
   display: block;
   margin: 0 auto;
 }
@@ -101,26 +101,20 @@ a { text-decoration: none; color: inherit; }
   font-size: 18px;
 }
 
-/* placeholder box */
+/* placeholder box（画像枠） */
 .ph{
   width: 100%;
   max-width: 100%;
   height: 260px;
-  overflow: hidden;;   /* ← hidden を visible に変更 */
+  overflow: hidden;      /* ← キレイ版は hidden */
   border-radius: 14px;
 }
-
-
 .ph img{
-  width: 100%;
+  width: 100%;           /* ← キレイ版は 100% */
   height: 100%;
   object-fit: cover;
   display: block;
 }
-
-
-
-
 .ph--small { height: 200px; }
 
 /* worry */
@@ -149,15 +143,13 @@ a { text-decoration: none; color: inherit; }
   padding: 14px;
   border-radius: 14px;
   border: 1px solid #e5e5e5;
-  overflow: visible;   /* ← 追加！ */
+  overflow: hidden;      /* ← キレイ版は hidden */
 }
 .ba__box img {
-  width: 140%;   /* ← ここ！ */
+  width: 100%;           /* ← キレイ版は 100% */
   height: auto;
   display: block;
 }
-
-
 .ba__label {
   font-weight: 700;
   margin: 0 0 8px;
@@ -232,14 +224,3 @@ a { text-decoration: none; color: inherit; }
   .ba { grid-template-columns: 1fr; }
   .fv__catch { font-size: 28px; }
 }
-@media (max-width: 900px) {
-  .ba__box { overflow: visible; }
-
-  .ba__box img {
-    width: 220% !important;     /* 140→220で確実に崩す */
-    transform: translateX(-30%) !important; /* さらにズラしてはみ出し確定 */
-    height: auto;
-    display: block;
-  }
-}
-
