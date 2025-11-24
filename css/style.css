@@ -217,21 +217,24 @@ a { text-decoration: none; color: inherit; }
   border-top: 1px solid #eee;
 }
 
-/* responsive */
+/* ===== スマホだけ：Before/After画像を“枠からはみ出させる” ===== */
 @media (max-width: 900px) {
-  .fv__inner { grid-template-columns: 1fr; }
-  .features, .reviews { grid-template-columns: 1fr; }
-  .ba { grid-template-columns: 1fr; }
-  .fv__catch { font-size: 28px; }
 
-  /* ▼スマホで崩すテスト */
-  .ph{
-    overflow: visible !important;
+  /* ① カード(外側)を、はみ出しOKにする */
+  .ba__box{
+    overflow: visible;
   }
-  .ph img{
-    width: 220% !important;
-    transform: translateX(-30%) !important;
-    height: auto !important;
+
+  /* ② 画像の枠(.ph)も、はみ出しOKにする */
+  .ba__box .ph{
+    overflow: visible;
+  }
+
+  /* ③ 画像だけデカくして、左にズラす */
+  .ba__box .ph img{
+    width: 180%;
+    height: auto;
+    transform: translateX(-22%);
     display: block;
   }
 }
