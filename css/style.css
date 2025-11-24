@@ -229,3 +229,11 @@ a { text-decoration: none; color: inherit; }
   .ba { grid-template-columns: 1fr; }
   .fv__catch { font-size: 28px; }
 }
+
+/* ===== Before/After 画像を “引き＋右寄せ” に強制上書き ===== */
+.ba__box .ph img{
+  object-position: right center !important;
+  transform: scale(0.9) !important;
+  transform-origin: right center !important;
+}
+
