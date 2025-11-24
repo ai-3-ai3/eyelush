@@ -219,3 +219,7 @@ a { text-decoration: none; color: inherit; }
   .ba { grid-template-columns: 1fr; }
   .fv__catch { font-size: 28px; }
 }
+/* After画像だけ上下位置を下寄せ（まつ毛を切らない） */
+.ba__box:last-child .ph img{
+  object-position: center bottom;
+}
