@@ -227,10 +227,18 @@ a { text-decoration: none; color: inherit; }
 @media (max-width: 900px) {
   .ba__box { overflow: visible !important; }
 
-  .ba__box img {
+ @media (max-width: 900px) {
+
+  /* 画像の枠(ph)が切らないようにする */
+  .ph{
+    overflow: visible !important;
+  }
+
+  /* 画像そのものをデカくしてずらす */
+  .ph img{
     width: 220% !important;
     transform: translateX(-30%) !important;
-    height: auto;
+    height: auto !important;
     display: block;
   }
 }
