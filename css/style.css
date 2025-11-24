@@ -223,18 +223,11 @@ a { text-decoration: none; color: inherit; }
   .features, .reviews { grid-template-columns: 1fr; }
   .ba { grid-template-columns: 1fr; }
   .fv__catch { font-size: 28px; }
-}
-@media (max-width: 900px) {
-  .ba__box { overflow: visible !important; }
 
- @media (max-width: 900px) {
-
-  /* 画像の枠(ph)が切らないようにする */
+  /* ▼スマホで崩すテスト */
   .ph{
     overflow: visible !important;
   }
-
-  /* 画像そのものをデカくしてずらす */
   .ph img{
     width: 220% !important;
     transform: translateX(-30%) !important;
