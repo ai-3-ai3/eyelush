@@ -106,13 +106,13 @@ a { text-decoration: none; color: inherit; }
   width: 100%;
   max-width: 100%;
   height: 260px;
-  overflow: visible;   /* ← hidden を visible に変更 */
+  overflow: hidden;;   /* ← hidden を visible に変更 */
   border-radius: 14px;
 }
 
 
 .ph img{
-  width: 140%;   /* ← 100% → 140% */
+  width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
@@ -149,7 +149,15 @@ a { text-decoration: none; color: inherit; }
   padding: 14px;
   border-radius: 14px;
   border: 1px solid #e5e5e5;
+  overflow: visible;   /* ← 追加！ */
 }
+.ba__box img {
+  width: 140%;   /* ← ここ！ */
+  height: auto;
+  display: block;
+}
+
+
 .ba__label {
   font-weight: 700;
   margin: 0 0 8px;
