@@ -110,8 +110,8 @@ a { text-decoration: none; color: inherit; }
   border-radius: 14px;
 }
 .ph img{
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: right center; /* ←追加！右寄りトリミング */
   display: block;
@@ -147,11 +147,7 @@ a { text-decoration: none; color: inherit; }
   border: 1px solid #e5e5e5;
   overflow: hidden;
 }
-.ba__box img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+
 .ba__label {
   font-weight: 700;
   margin: 0 0 8px;
