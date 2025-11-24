@@ -106,16 +106,18 @@ a { text-decoration: none; color: inherit; }
   width: 100%;
   max-width: 100%;
   height: 260px;
-  overflow: hidden;   /* ←枠から出た分は切る */
+  overflow: visible;   /* ← hidden を visible に変更 */
   border-radius: 14px;
 }
 
+
 .ph img{
-  width: 100%;
+  width: 140%;   /* ← 100% → 140% */
   height: 100%;
   object-fit: cover;
   display: block;
 }
+
 
 
 
