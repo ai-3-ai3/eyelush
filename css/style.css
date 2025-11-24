@@ -236,8 +236,17 @@ a { text-decoration: none; color: inherit; }
   transform: scale(0.9) !important;
   transform-origin: right center !important;
 }
-/* ★CSS効いてるかテスト★ */
-.ba__box{
-  outline: 6px solid red !important;
+
+/* ===== Before/After 画像だけ：引き＋右寄せ ===== */
+.ba__box .ph img{
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: right center !important;
+
+  /* 引き具合：ここだけ調整 */
+  transform: scale(0.82) !important;   /* ← 0.82〜0.9で好み探す */
+  transform-origin: right center !important;
 }
+
 
