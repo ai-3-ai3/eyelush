@@ -55,10 +55,6 @@ a { text-decoration: none; color: inherit; }
   padding: 72px 0;
   background: linear-gradient(#fff, #fafafa);
 }
-.hero-right img {
-  width: 100%;
-  max-width: 300px;
-}
 .fv_image img {
   width: 100%;
   max-width: 260px;
@@ -105,17 +101,16 @@ a { text-decoration: none; color: inherit; }
 .ph{
   width: 100%;
   max-width: 100%;
-  height: 260px;
-  overflow: hidden;      /* ← キレイ版は hidden */
+  height: 200px;
+  overflow: hidden;      /* ← 枠の中で綺麗に切る */
   border-radius: 14px;
 }
 .ph img{
-  width: 100%;           /* ← キレイ版は 100% */
+  width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
-.ph--small { height: 200px; }
 
 /* worry */
 .worry {
@@ -143,10 +138,10 @@ a { text-decoration: none; color: inherit; }
   padding: 14px;
   border-radius: 14px;
   border: 1px solid #e5e5e5;
-  overflow: hidden;      /* ← キレイ版は hidden */
+  overflow: hidden;        /* ← はみ出さない"綺麗版" */
 }
 .ba__box img {
-  width: 100%;           /* ← キレイ版は 100% */
+  width: 100%;
   height: auto;
   display: block;
 }
@@ -217,24 +212,10 @@ a { text-decoration: none; color: inherit; }
   border-top: 1px solid #eee;
 }
 
-/* ===== スマホだけ：Before/After画像を“枠からはみ出させる” ===== */
+/* responsive */
 @media (max-width: 900px) {
-
-  /* ① カード(外側)を、はみ出しOKにする */
-  .ba__box{
-    overflow: visible;
-  }
-
-  /* ② 画像の枠(.ph)も、はみ出しOKにする */
-  .ba__box .ph{
-    overflow: visible;
-  }
-
-  /* ③ 画像だけデカくして、左にズラす */
-  .ba__box .ph img{
-    width: 180%;
-    height: auto;
-    transform: translateX(-22%);
-    display: block;
-  }
+  .fv__inner { grid-template-columns: 1fr; }
+  .features, .reviews { grid-template-columns: 1fr; }
+  .ba { grid-template-columns: 1fr; }
+  .fv__catch { font-size: 28px; }
 }
