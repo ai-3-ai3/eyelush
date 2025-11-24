@@ -224,3 +224,13 @@ a { text-decoration: none; color: inherit; }
   .ba { grid-template-columns: 1fr; }
   .fv__catch { font-size: 28px; }
 }
+@media (max-width: 900px) {
+  .ba__box { overflow: visible !important; }
+
+  .ba__box img {
+    width: 220% !important;
+    transform: translateX(-30%) !important;
+    height: auto;
+    display: block;
+  }
+}
