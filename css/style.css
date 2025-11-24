@@ -109,12 +109,13 @@ a { text-decoration: none; color: inherit; }
   overflow: hidden;
   border-radius: 14px;
 }
-.ph img{
+.ph img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;         /* ← これで縦の切れがなくなる */
+  object-fit: contain;  /* ← 画像を切らずに全体を表示 */
   display: block;
 }
+
 
 .ph--small { height: 200px; }
 
